@@ -17,7 +17,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      command: ["./wait-for-it.sh", "mysql-standalone:3306", "--", "java",  "-jar", "docker-mk.war"]
     depends_on:
          - mysql-standalone
                
