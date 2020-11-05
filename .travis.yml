@@ -4,5 +4,5 @@ language: generic
 services:
   - docker
 script:
-  - mvn clean install -o -DskipTests=true
+  - mvn clean install -DskipTests=true
   - docker-compose -f docker-compose.yml up --build
