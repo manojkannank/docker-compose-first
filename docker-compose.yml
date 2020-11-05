@@ -19,5 +19,6 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-standalone:3306/demo?autoReconnect=true&useSSL=false  
     depends_on:
       - mysql-standalone
+      		condition: service_healthy		
 
 
