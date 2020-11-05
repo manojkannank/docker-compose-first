@@ -1,4 +1,5 @@
 From openjdk:8
+WORKDIR /app
 ADD target/docker-mk.war docker-mk.war
 COPY wait-for-it.sh /bin/sh/wait-for-it.sh
 RUN chmod +x /wait-for-it.sh
