@@ -9,8 +9,7 @@ services:
       - MYSQL_DATABASE=demo
     ports:
       - 3307:3306
-    healthcheck:
-      test: mysqladmin ping -h mysql-standalone -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+    
   springboot-docker-container:
     image: springboot-docker-container
     ports:
@@ -19,7 +18,7 @@ services:
       context: .
       dockerfile: Dockerfile
     depends_on:
-         - mysql-standalone
+          mysql-standalone
                
 
 
